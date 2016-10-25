@@ -6,6 +6,7 @@
     <dimen name="material_space_between_containers">8dp</dimen>
     <dimen name="material_status_bar_height">24dp</dimen>
     <dimen name="material_menu_item_aspect">24dp</dimen>
+    <dimen name="material_drawer_top_margin">36dp</dimen>
     <dimen name="drawer_header_height">128dp</dimen>
     <dimen name="drawer_image_aspect">56dp</dimen>
 </resources>
