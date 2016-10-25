@@ -1,9 +1,8 @@
 package com.giyp.dagger.component;
 
-import com.giyp.base.BaseActivity;
 import com.giyp.dagger.module.AppModule;
 import com.giyp.dagger.module.NetModule;
-import com.giyp.views.activity.MainActivity;
+import com.giyp.view.activity.MainActivity;
 
 import javax.inject.Singleton;
 

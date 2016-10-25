@@ -26,13 +26,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
                 <include android:id="@+id/toolbar" layout="@layout/toolbar"/>
-
-            </RelativeLayout>
+            </LinearLayout>
 
         </android.support.design.widget.AppBarLayout>
 

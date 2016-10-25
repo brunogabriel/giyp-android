@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="@dimen/material_status_bar_height"
+    android:background="@color/colorSlateGrey"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:paddingTop="@dimen/material_status_bar_height"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:background="@color/colorArsenic"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/drawer_header_height">
-
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="@dimen/drawer_image_aspect"
-            android:layout_height="@dimen/drawer_image_aspect"
-            android:layout_marginLeft="@dimen/material_margin_horizontal"
-            android:src="@mipmap/ic_launcher"
-            app:civ_border_width="1dp"
-            app:civ_border_color="@android:color/white" />
-
-        <android.support.v7.widget.AppCompatTextView
-            android:textColor="@android:color/white"
-            android:textSize="14sp"
-            android:layout_marginLeft="@dimen/material_margin_horizontal"
-            android:layout_marginRight="@dimen/material_margin_horizontal"
-            android:text="Hello World"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <android.support.v7.widget.RecyclerView
-        android:background="@color/colorSlateGrey"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v7.widget.RecyclerView>
-
+    <include layout="@layout/holder_menu"/>
 </LinearLayout>
+
+    <!--
+<android.support.v7.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="@dimen/material_status_bar_height"
+    android:background="@color/colorSlateGrey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</android.support.v7.widget.RecyclerView> -->

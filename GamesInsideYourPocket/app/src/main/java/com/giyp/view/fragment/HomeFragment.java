@@ -1,4 +1,4 @@
-package com.giyp.views.fragment;
+package com.giyp.view.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

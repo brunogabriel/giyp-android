@@ -1,4 +1,4 @@
-package com.giyp.views.activity;
+package com.giyp.view.activity;
 
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
