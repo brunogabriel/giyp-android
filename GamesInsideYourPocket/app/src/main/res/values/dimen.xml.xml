@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="material_margin_horizontal">16dp</dimen>
+    <dimen name="material_margin_vertical">16dp</dimen>
+
+    <dimen name="material_status_bar_height">24dp</dimen>
+
+    <dimen name="drawer_header_height">128dp</dimen>
+    <dimen name="drawer_image_aspect">56dp</dimen>
+
+
+</resources>
