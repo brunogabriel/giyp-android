@@ -19,6 +19,7 @@
         android:layout_marginLeft="@dimen/material_space_between_containers"
         android:layout_marginRight="@dimen/material_margin_horizontal"
         android:text="@string/app_name"
+        fontPath="fonts/Roboto/Roboto-Bold.ttf"
         android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

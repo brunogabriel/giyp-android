@@ -80,5 +80,3 @@ dependencies {
     compile 'com.karumi:dexter:2.3.1'
 
 }
-
-// Giant Bomb key 86a16c80668174f170d99fe0d62c8a36e0c5122d http://www.giantbomb.com/api/
