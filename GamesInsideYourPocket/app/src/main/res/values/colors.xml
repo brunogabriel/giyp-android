@@ -7,7 +7,7 @@
 
     <!-- Grey -->
     <color name="colorGrey50">#FAFAFA</color>
-    <color name="colorGrey100">#F5F5F5</color>
+    <color name="colorGrey100">#f5f5f5</color>
     <color name="colorGrey200">#EEEEEE</color>
     <color name="colorGrey300">#E0E0E0</color>
     <color name="colorGrey400">#BDBDBD</color>
@@ -16,4 +16,25 @@
     <!-- Blue Grey -->
     <color name="colorArsenic">#34404A</color>
     <color name="colorSlateGrey">#607C98</color>
+
+    <!-- Navigation View - Drawer Icons Menu -->
+    <color name="colorMenuItem1">#009688</color>
+    <color name="colorMenuItemDark1">#00796B</color>
+
+    <color name="colorMenuItem2">#FF9800</color>
+    <color name="colorMenuItemDark2">#F57C00</color>
+
+    <color name="colorMenuItem3">#FFEB3B</color>
+    <color name="colorMenuItemDark3">#FBC02D</color>
+
+    <color name="colorMenuItem4">#F44336</color>
+    <color name="colorMenuItemDark4">#D32F2F</color>
+
+    <color name="colorMenuItem5">#8BC34A</color>
+    <color name="colorMenuItemDark5">#689F38</color>
+
+    <color name="colorMenuItem6">#03A9F4</color>
+    <color name="colorMenuItemDark6">#0288D1</color>
+
+
 </resources>

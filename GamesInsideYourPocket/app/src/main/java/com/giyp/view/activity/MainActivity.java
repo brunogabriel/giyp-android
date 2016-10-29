@@ -7,9 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
-
 import com.giyp.R;
 import com.giyp.base.BaseActivity;
 import com.giyp.view.fragment.HomeFragment;
@@ -44,29 +42,50 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         initView();
-
     }
 
     private void initView() {
-        setupToolbar(toolbar, "Home", false);
+        setupToolbar(toolbar, getString(R.string.navigation_item_home), false);
         setupNavigationDrawer();
     }
 
     private void setupNavigationDrawer() {
         mNavigationView.setNavigationItemSelectedListener(item -> {
             int mClickedId = item.getItemId();
+
+            // Clicked to open the same
+            if (mLastClicked == mClickedId) {
+                drawer.closeDrawers();
+                return true;
+            }
+
             Fragment mNewFragment=null;
             switch (mClickedId) {
                 case R.id.home:
-                    if (mLastClicked!=mClickedId) {
-                        mNewFragment = new HomeFragment();
-                    }
+                    mNewFragment = new HomeFragment();
+                    applyToolbarColors(toolbar, R.color.colorMenuItem1, R.color.colorMenuItemDark1);
+                    break;
+                case R.id.consoles:
+                    applyToolbarColors(toolbar, R.color.colorMenuItem2, R.color.colorMenuItemDark2);
+                    mNewFragment = new HomeFragment();
+                    break;
+                case R.id.games:
+                    applyToolbarColors(toolbar, R.color.colorMenuItem3, R.color.colorMenuItemDark3);
+                    mNewFragment = new HomeFragment();
+                    break;
+                case R.id.favourites:
+                    applyToolbarColors(toolbar, R.color.colorMenuItem4, R.color.colorMenuItemDark4);
+                    mNewFragment = new HomeFragment();
+                    break;
+                case R.id.settings:
+                    applyToolbarColors(toolbar, R.color.colorMenuItem5, R.color.colorMenuItemDark5);
+                    mNewFragment = new HomeFragment();
                     break;
                 default:
                     break;
             }
 
-            if (mNewFragment!=null) {
+            if (mNewFragment != null) {
                 mCurrentFragment = mNewFragment;
                 mLastClicked = mClickedId;
                 changeContentFragment(mNewFragment, item.getTitle().toString());
@@ -76,8 +95,10 @@ public class MainActivity extends BaseActivity {
             return true;
         });
 
-        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar,
-                R.string.drawer_open, R.string.drawer_close) {
+        // Disable colors on icons
+        mNavigationView.setItemIconTintList(null);
+
+        mActionBarDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.drawer_open, R.string.drawer_close) {
             @Override
             public void onDrawerClosed(View v){
                 super.onDrawerClosed(v);
@@ -95,6 +116,7 @@ public class MainActivity extends BaseActivity {
         // Define first element
         mNavigationView.getMenu().getItem(0).setChecked(true);
         getSupportActionBar().setTitle(mNavigationView.getMenu().getItem(0).getTitle());
+        applyToolbarColors(toolbar, R.color.colorMenuItem1, R.color.colorMenuItemDark1);
     }
 
     private void changeContentFragment(Fragment mNextFragment, String mNextTitle) {

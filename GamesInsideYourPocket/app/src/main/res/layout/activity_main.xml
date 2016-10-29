@@ -41,7 +41,12 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:layout_gravity="start"
+        android:actionMenuTextColor="@android:color/white"
+        android:background="@color/colorArsenic"
+        app:itemTextColor="@android:color/white"
         android:fitsSystemWindows="true"
-        app:menu="@menu/menu_main_navigation"/>
+        app:menu="@menu/menu_main_navigation"
+        android:theme="@style/AppTheme.MenuSubitemText">
+    </android.support.design.widget.NavigationView>
 
 </android.support.v4.widget.DrawerLayout>
